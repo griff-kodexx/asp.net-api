@@ -61,20 +61,7 @@ namespace workOrderAPI.Controllers{
                 _context.SaveChanges();
                 return NoContent();
             }
-
-
-            //deletes a work order
-            [HttpDelete("{id}")]
-            public IActionResult Delete(long id){
-                var work = _context.WorkOrderItems.Find(id);
-                if(work == null){
-                    return NotFound();
-                }
-
-                _context.WorkOrderItems.Remove(work);
-                _context.SaveChanges();
-                return NoContent();
-            }
+  
 
     }
 }
