@@ -5,7 +5,7 @@ using System.Linq;
 namespace workOrderAPI.Controllers{
     
 
-    //ASP.NET is case insensitive. maps controller name minus te suffix. i.e workorder
+    //ASP.NET is case insensitive. maps controller name minus the suffix. i.e workorder
     [Route("api/[controller]")]
     [ApiController]
         public class WorkOrderController : ControllerBase{
@@ -53,7 +53,7 @@ namespace workOrderAPI.Controllers{
                     return NotFound();
                 }
 
-                work.IsComplete = workOrder.IsComplete;
+                work.Description = workOrder.Description;
                 work.Name = workOrder.Name;
 
 
