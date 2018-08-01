@@ -1,4 +1,4 @@
-namespace workOrderApi.Models
+namespace workOrderAPI.Models
 {
     public class WorkOrder
     {

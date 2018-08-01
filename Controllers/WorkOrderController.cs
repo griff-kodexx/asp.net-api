@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using workOrderApi.Models;
+using workOrderAPI.Models;
 using System.Collections.Generic;
 using System.Linq;
 namespace workOrderAPI.Controllers{

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace workOrderApi.Models
+namespace workOrderAPI.Models
 {
     public class WorkOrderContext : DbContext
     {
