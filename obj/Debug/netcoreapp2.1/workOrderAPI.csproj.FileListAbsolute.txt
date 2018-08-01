@@ -1,0 +1,14 @@
+/home/griff/Desktop/dotnet/workOrderAPI/bin/Debug/netcoreapp2.1/workOrderAPI.deps.json
+/home/griff/Desktop/dotnet/workOrderAPI/bin/Debug/netcoreapp2.1/workOrderAPI.runtimeconfig.json
+/home/griff/Desktop/dotnet/workOrderAPI/bin/Debug/netcoreapp2.1/workOrderAPI.runtimeconfig.dev.json
+/home/griff/Desktop/dotnet/workOrderAPI/bin/Debug/netcoreapp2.1/workOrderAPI.dll
+/home/griff/Desktop/dotnet/workOrderAPI/bin/Debug/netcoreapp2.1/workOrderAPI.pdb
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.csprojAssemblyReference.cache
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.csproj.CoreCompileInputs.cache
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.RazorAssemblyInfo.cache
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.RazorAssemblyInfo.cs
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.AssemblyInfoInputs.cache
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.AssemblyInfo.cs
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.RazorTargetAssemblyInfo.cache
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.dll
+/home/griff/Desktop/dotnet/workOrderAPI/obj/Debug/netcoreapp2.1/workOrderAPI.pdb
