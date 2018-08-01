@@ -6,4 +6,3 @@ public class JWTSettings
     public string Audience { get; set; }
   }
 }
-}

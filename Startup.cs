@@ -35,12 +35,18 @@ namespace workOrderAPI
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
-           var Configuration = builder.Build();// added var
+            Configuration = builder.Build();// removed /added var
 }
-        public IConfigurationRoot Configuration { get; }
+      public IConfigurationRoot Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddEntityFrameworkInMemoryDatabase()
+              .AddDbContext<UserDbContext>(opt => opt.UseInMemoryDatabase("WorkOrderList")); //maybe change to userList
+
+            services.AddIdentity<ApplicationUser, ApplicationRole>() //maybe be a model of user, role
+              .AddEntityFrameworkStores<UserDbContext>();
+
             services.Configure<JWTSettings>(Configuration.GetSection("JWTSettings"));
             
             services.AddDbContext<WorkOrderContext>(opt => 
@@ -51,6 +57,7 @@ namespace workOrderAPI
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseIdentity();
             app.UseMvc();
         }
     }
