@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace workOrderAPI.Controllers
 {
   [Route("api/[controller]")]
+  [ApiController]
   public class AccountController : Controller
   {
     private readonly UserManager<IdentityUser> _userManager;
