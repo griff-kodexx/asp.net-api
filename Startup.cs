@@ -43,12 +43,7 @@ namespace workOrderAPI
             services.AddDbContext<WorkOrderContext>(opt => opt.UseInMemoryDatabase("WorkOrderList"));
             services.AddEntityFrameworkInMemoryDatabase()
               .AddDbContext<UserDbContext>(opt => opt.UseInMemoryDatabase("WorkOrderList")); //maybe change to userList
-
-            services.AddIdentity<ApplicationUser, ApplicationRole>() //maybe be a model of user, role
-              .AddEntityFrameworkStores<UserDbContext>();
-
-            services.Configure<JWTSettings>(Configuration.GetSection("JWTSettings"));
-            
+                    
             services.AddDbContext<WorkOrderContext>(opt => 
                 opt.UseInMemoryDatabase("WorkOrderList"));
             services.AddMvc()
