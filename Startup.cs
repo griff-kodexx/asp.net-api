@@ -76,13 +76,13 @@ namespace workOrderAPI
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseSwagger();
+            app.UseSwagger(o => {
+                o.RouteTemplate = "api-docs/{documentName}/docs.json";
+            });
             app.UseSwaggerUI(c =>{
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Work Order API V1");
-            });
-            app.UseSwaggerUI(o => {
-                o.RoutePrefix = "api-docs";
-            });
+                c.SwaggerEndpoint("/api-docs/v1/api-docs.json", "Work Order API V1");
+                c.RoutePrefix = "api-docs";
+            });                   
             app.UseAuthentication();
             app.UseMvc();
         }
