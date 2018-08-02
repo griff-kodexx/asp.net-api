@@ -52,10 +52,7 @@ namespace workOrderAPI
             services.AddMvc()
                     .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
              // Register the Swagger generator, defining 1 or more Swagger documents
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Info { Title = "WorkOrder API", Version = "v1" });
-            });
+            
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new Info{
                     Version = "v1",
