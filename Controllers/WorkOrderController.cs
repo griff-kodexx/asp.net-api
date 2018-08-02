@@ -22,7 +22,7 @@ namespace workOrderAPI.Controllers{
             }
 
             //Get all work orders
-            [HttpGet]
+            [HttpGet, Authorize]
             public ActionResult<List<WorkOrder>> GetAll(){
                 return _context.WorkOrderItems.ToList();
             }
