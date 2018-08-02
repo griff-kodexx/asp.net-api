@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using workOrderAPI.Models;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using System.Linq;
 namespace workOrderAPI.Controllers{
     
@@ -37,7 +38,7 @@ namespace workOrderAPI.Controllers{
             }
 
             //create a work order
-            [HttpPost]
+            [HttpPost, Authorize]
             public IActionResult Create(WorkOrder workOrder){
                 _context.WorkOrderItems.Add(workOrder);
                 _context.SaveChanges();
@@ -46,7 +47,7 @@ namespace workOrderAPI.Controllers{
             }
 
             //update a work order
-            [HttpPut("{id}")]
+            [HttpPut("{id}"), Authorize]
             public IActionResult Update(long id, WorkOrder workOrder){
                 var work = _context.WorkOrderItems.Find(id);
                 if(work == null){

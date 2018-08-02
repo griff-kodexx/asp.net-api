@@ -97,7 +97,7 @@ namespace workOrderAPI
             app.UseSwaggerUI(c =>{
                 c.SwaggerEndpoint("/api-docs/v1/api-docs.json", "Work Order API V1");
                 c.RoutePrefix = "api-docs";
-            });                   
+            });                           
             app.UseAuthentication();
             app.UseMvc();
         }
