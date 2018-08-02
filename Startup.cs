@@ -19,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 
+
 namespace workOrderAPI
 {
     public class Startup
@@ -32,7 +33,7 @@ namespace workOrderAPI
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();// removed /added var
-}
+            }
       public IConfigurationRoot Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
@@ -77,7 +78,10 @@ namespace workOrderAPI
         {
             app.UseSwagger();
             app.UseSwaggerUI(c =>{
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Work Order API V1");
+            });
+            app.UseSwaggerUI(o => {
+                o.RoutePrefix = "api-docs";
             });
             app.UseAuthentication();
             app.UseMvc();
