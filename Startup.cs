@@ -60,6 +60,10 @@ namespace workOrderAPI
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>{
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseAuthentication();
             app.UseMvc();
         }
