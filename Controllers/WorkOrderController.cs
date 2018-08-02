@@ -6,7 +6,7 @@ using System.Linq;
 namespace workOrderAPI.Controllers{
     
 
-    //ASP.NET is case insensitive. maps controller name minus the suffix. i.e workorder
+    
     [Route("/[controller]")]
     [ApiController]
         public class WorkOrderController : ControllerBase{
@@ -21,13 +21,13 @@ namespace workOrderAPI.Controllers{
                 }
             }
 
-            //Get all work orders
+            
             [HttpGet, Authorize]
             public ActionResult<List<WorkOrder>> GetAll(){
                 return _context.WorkOrderItems.ToList();
             }
 
-            // Get a single workOrder
+            
             [HttpGet("{id}", Name = "GetWorkOrder")]
             public ActionResult<WorkOrder> GetById(long id){
                 var workOrder = _context.WorkOrderItems.Find(id);
@@ -37,7 +37,7 @@ namespace workOrderAPI.Controllers{
                 return workOrder;
             }
 
-            //create a work order
+            
             [HttpPost, Authorize]
             public IActionResult Create(WorkOrder workOrder){
                 _context.WorkOrderItems.Add(workOrder);
@@ -46,7 +46,7 @@ namespace workOrderAPI.Controllers{
                 return CreatedAtRoute("GetWorkOrder", new WorkOrder{id = workOrder.id}, workOrder);
             }
 
-            //update a work order
+            
             [HttpPut("{id}"), Authorize]
             public IActionResult Update(long id, WorkOrder workOrder){
                 var work = _context.WorkOrderItems.Find(id);

@@ -33,7 +33,7 @@ namespace workOrderAPI
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
-            Configuration = builder.Build();// removed /added var
+            Configuration = builder.Build();
             }
       public IConfigurationRoot Configuration { get; }
 
@@ -48,7 +48,7 @@ namespace workOrderAPI
                 opt.UseInMemoryDatabase("WorkOrderList"));
             services.AddMvc()
                     .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-             // Register the Swagger generator, defining 1 or more Swagger documents
+             
             
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new Info{
