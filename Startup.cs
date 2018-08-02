@@ -77,7 +77,7 @@ namespace workOrderAPI
         public void Configure(IApplicationBuilder app)
         {
             app.UseSwagger(o => {
-                o.RouteTemplate = "api-docs/{documentName}/docs.json";
+                o.RouteTemplate = "api-docs/{documentName}/api-docs.json";
             });
             app.UseSwaggerUI(c =>{
                 c.SwaggerEndpoint("/api-docs/v1/api-docs.json", "Work Order API V1");
