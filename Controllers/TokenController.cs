@@ -10,7 +10,7 @@ namespace workOrderAPI.Controllers{
     [Route("/[controller]")]
     public class TokenController : Controller{
         private IConfiguration _config;
-        private TokenController(IConfiguration config){
+        public TokenController(IConfiguration config){
             _config = config;
         }
 
