@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace workOrderAPI
 {
@@ -37,6 +37,8 @@ namespace workOrderAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<WorkOrderContext>(opt => opt.UseInMemoryDatabase("WorkOrderList"));
             services.AddEntityFrameworkInMemoryDatabase()
               .AddDbContext<UserDbContext>(opt => opt.UseInMemoryDatabase("WorkOrderList")); //maybe change to userList
 
@@ -49,6 +51,11 @@ namespace workOrderAPI
                 opt.UseInMemoryDatabase("WorkOrderList"));
             services.AddMvc()
                     .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+             // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "WorkOrder API", Version = "v1" });
+            });
         }
 
         public void Configure(IApplicationBuilder app)
