@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace workOrderAPI.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("/[controller]")]
   [ApiController]
   public class AccountController : Controller
   {

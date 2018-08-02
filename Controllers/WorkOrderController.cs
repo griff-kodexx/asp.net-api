@@ -6,7 +6,7 @@ namespace workOrderAPI.Controllers{
     
 
     //ASP.NET is case insensitive. maps controller name minus the suffix. i.e workorder
-    [Route("api/[controller]")]
+    [Route("/[controller]")]
     [ApiController]
         public class WorkOrderController : ControllerBase{
             private readonly WorkOrderContext _context;
