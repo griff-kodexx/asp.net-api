@@ -56,6 +56,24 @@ namespace workOrderAPI
             {
                 c.SwaggerDoc("v1", new Info { Title = "WorkOrder API", Version = "v1" });
             });
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Info{
+                    Version = "v1",,
+                    Title = "Work Order API",
+                    Description = "Implementation of the work order API using ASP.NET Core Web API",
+                    TermsOfService = "None",
+                    Contact = new Contact{
+                        Name =  string.Empty,
+                        Email = String.Empty,
+                        Url = string.Empty
+                    },
+                    License = new License{
+                        Name = string.Empty,
+                        Url = string.Empty
+                    }
+                });
+            });
+                    
         }
 
         public void Configure(IApplicationBuilder app)
